@@ -20,6 +20,7 @@
 		01C1FCD71BDC304800902D1D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C1FCD41BDC304700902D1D /* SystemConfiguration.framework */; };
 		01C1FCD91BDC305000902D1D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C1FCD81BDC305000902D1D /* libz.tbd */; };
 		01C1FCDB1BDC305900902D1D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C1FCDA1BDC305900902D1D /* libsqlite3.tbd */; };
+		01E6EB9D1BE0552A001B1EED /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6EB9C1BE0552A001B1EED /* Action.swift */; };
 		9F1D3DD11BD6062A00E61175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D3DD01BD6062A00E61175 /* AppDelegate.swift */; };
 		9F1D3DD31BD6062A00E61175 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D3DD21BD6062A00E61175 /* ViewController.swift */; };
 		9F1D3DD61BD6062A00E61175 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1D3DD41BD6062A00E61175 /* Main.storyboard */; };
@@ -30,6 +31,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		01CC9B8A1BE1D4320036B670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC9B841BE1D4320036B670 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D0B1AD2CFA600CFC3EB;
+			remoteInfo = "Kingfisher-Demo";
+		};
+		01CC9B8C1BE1D4320036B670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC9B841BE1D4320036B670 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D351AD2D09F00CFC3EB;
+			remoteInfo = Kingfisher;
+		};
+		01CC9B8E1BE1D4320036B670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC9B841BE1D4320036B670 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D3F1AD2D09F00CFC3EB;
+			remoteInfo = KingfisherTests;
+		};
+		01CC9B901BE1D48A0036B670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC9B841BE1D4320036B670 /* Kingfisher.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D1ED2D341AD2D09F00CFC3EB;
+			remoteInfo = Kingfisher;
+		};
 		9F1D3DE21BD6062A00E61175 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9F1D3DC51BD6062A00E61175 /* Project object */;
@@ -60,6 +89,8 @@
 		01C1FCD41BDC304700902D1D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		01C1FCD81BDC305000902D1D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		01C1FCDA1BDC305900902D1D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		01CC9B841BE1D4320036B670 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
+		01E6EB9C1BE0552A001B1EED /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Data/Action.swift; sourceTree = "<group>"; };
 		9F1D3DCD1BD6062A00E61175 /* Lessig2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lessig2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1D3DD01BD6062A00E61175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F1D3DD21BD6062A00E61175 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +165,24 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		01CC9B851BE1D4320036B670 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01CC9B8B1BE1D4320036B670 /* Kingfisher-Demo.app */,
+				01CC9B8D1BE1D4320036B670 /* Kingfisher.framework */,
+				01CC9B8F1BE1D4320036B670 /* KingfisherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01E6EB9B1BE0550B001B1EED /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				01E6EB9C1BE0552A001B1EED /* Action.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		9F1D3DC41BD6062A00E61175 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +190,7 @@
 				9F1D3DE41BD6062A00E61175 /* iosTests */,
 				9F1D3DEF1BD6062A00E61175 /* iosUITests */,
 				9F1D3DCE1BD6062A00E61175 /* Products */,
+				01CC9B841BE1D4320036B670 /* Kingfisher.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +207,7 @@
 		9F1D3DCF1BD6062A00E61175 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				01E6EB9B1BE0550B001B1EED /* Data */,
 				9F1D3DD01BD6062A00E61175 /* AppDelegate.swift */,
 				9F1D3DD21BD6062A00E61175 /* ViewController.swift */,
 				9F1D3DD41BD6062A00E61175 /* Main.storyboard */,
@@ -200,6 +251,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				01CC9B911BE1D48A0036B670 /* PBXTargetDependency */,
 			);
 			name = ios;
 			productName = ios;
@@ -275,6 +327,12 @@
 			mainGroup = 9F1D3DC41BD6062A00E61175;
 			productRefGroup = 9F1D3DCE1BD6062A00E61175 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 01CC9B851BE1D4320036B670 /* Products */;
+					ProjectRef = 01CC9B841BE1D4320036B670 /* Kingfisher.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9F1D3DCC1BD6062A00E61175 /* ios */,
@@ -283,6 +341,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		01CC9B8B1BE1D4320036B670 /* Kingfisher-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Kingfisher-Demo.app";
+			remoteRef = 01CC9B8A1BE1D4320036B670 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		01CC9B8D1BE1D4320036B670 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = 01CC9B8C1BE1D4320036B670 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		01CC9B8F1BE1D4320036B670 /* KingfisherTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KingfisherTests.xctest;
+			remoteRef = 01CC9B8E1BE1D4320036B670 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9F1D3DCB1BD6062A00E61175 /* Resources */ = {
@@ -317,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F1D3DD31BD6062A00E61175 /* ViewController.swift in Sources */,
+				01E6EB9D1BE0552A001B1EED /* Action.swift in Sources */,
 				9F1D3DD11BD6062A00E61175 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +423,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		01CC9B911BE1D48A0036B670 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			targetProxy = 01CC9B901BE1D48A0036B670 /* PBXContainerItemProxy */;
+		};
 		9F1D3DE31BD6062A00E61175 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9F1D3DCC1BD6062A00E61175 /* ios */;

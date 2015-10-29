@@ -1,0 +1,3 @@
+[submodule "platform/native/ios/Kingfisher"]
+	path = platform/native/ios/Kingfisher
+	url = https://github.com/onevcat/Kingfisher.git

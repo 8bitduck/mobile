@@ -8,13 +8,14 @@
 
 import UIKit
 import Parse
+import Kingfisher
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tableView: UITableView!
     
     let textCellIdentifier = "TextCell"
     var itemCount = 0
-    var actions: [PFObject]?
+    var actions: [Action]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        }
     }
     
+    // MARK:  UITextFieldDelegate Methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -43,17 +45,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
         
         let row = indexPath.row
-        let a = actions?[row] as PFObject!
-        cell.textLabel?.text = a["title"] as? String
-        cell.detailTextLabel?.text = a["message"] as? String
-        
+        let a = actions?[row]
+        cell.textLabel?.text = a?.title
+        cell.detailTextLabel?.text = a?.message
+        if(a?["thumbnailUrl"] != nil) {
+            cell.imageView?.kf_setImageWithURL(NSURL(string: a!.thumbnailUrl)!, placeholderImage: UIImage(named: "placeholderImage"))
+        } else {
+            cell.imageView?.image = UIImage(named: "placeholderImage")
+        }
+
         return cell
+    }
+    
+    // MARK:  UITableViewDelegate Methods
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let row = indexPath.row
+        print(row)
     }
 
     
     func retrieveActionObjects()
     {
-        let query = PFQuery(className: "Action")
+        let query = Action.query()!
         query.addDescendingOrder("priority")
         query.addDescendingOrder("createdAt")
         query.findObjectsInBackgroundWithBlock {
@@ -61,14 +76,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             if error == nil {
                 self.itemCount = objects!.count
-                self.actions = objects
+                self.actions = objects as? [Action]
                 // The find succeeded.
                 print("Successfully retrieved \(objects!.count) scores.")
+
                 // Do something with the found objects
-                if let objects = objects as [PFObject]! {
+                if let objects = objects as? [Action] {
                     for object in objects {
+
                         print(object.objectId)
                         print(object["message"])
+                        print(object.recipients)
                     }
                 }
             } else {
